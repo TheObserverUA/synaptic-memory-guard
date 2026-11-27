@@ -7,9 +7,8 @@
 # Synaptic Memory Guard (SMG)
 **Entropy-Gated & Quarantine-Verified Long-Term Memory Middleware for AI Agents**
 
-[![License: AGPL v3](https://shields.io)](https://gnu.org)
-[![Python 3.10+](https://shields.io)](https://python.org)
-[![Status: Production-Ready Architecture](https://shields.io)]()
+**License:** [GNU AGPLv3](https://gnu.org) • **Python:** 3.10+ (Zero-Dependency Core) • **Status:** Reference Architecture / MVP
+
 
 ## 1. The Problem in Production Agentic Systems
 Modern AI agents connected to long-term memory (Vector DBs, RAG pipelines, LangGraph state) suffer from three critical production failures:
