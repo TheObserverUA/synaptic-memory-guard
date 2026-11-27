@@ -86,7 +86,7 @@ New insights are isolated in a volatile quarantine table (`Status: UNVERIFIED`) 
 ## 4. Quick Integration (Python Middleware Example)
 
 ```python
-from synaptic_guard import MemoryGuard, MemoryConfig
+from memory_guard import MemoryGuard, MemoryConfig
 
 # Initialize middleware between your LLM agent and Vector DB (Qdrant/Pinecone/Chroma)
 guard = MemoryGuard(
