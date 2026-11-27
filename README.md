@@ -1,6 +1,6 @@
 > **Architectural Lineage:** This repository is the applied, production-focused implementation derived from two foundational theoretical works by **TheObserverUA**:
-> 1. **[Semantic Cognitive Entropy](https://github.com)** — establishes human cognitive entropy (`Priority 0`) as the non-negotiable survival anchor against `Model Collapse`.
-> 2. **[Rumor Mill Continual Learning](https://github.com)** — introduces thalamic compute gating, synaptic `EPSP/IPSP` scoring, and quarantined validation protocols.
+> 1. **[Semantic Cognitive Entropy](https://github.com/TheObserverUA/-semantic-cognitive-entropy)** — establishes human cognitive entropy (`Priority 0`) as the non-negotiable survival anchor against `Model Collapse`.
+> 2. **[Rumor Mill Continual Learning](https://github.com/TheObserverUA/rumor-mill-continual-learning )** — introduces thalamic compute gating, synaptic `EPSP/IPSP` scoring, and quarantined validation protocols.
 >
 > **Synaptic Memory Guard (SMG)** distills the most immediately deployable engineering primitives from both architectures into a zero-dependency middleware for modern RAG and autonomous agent pipelines.
 
