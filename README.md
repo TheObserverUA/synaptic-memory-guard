@@ -124,7 +124,7 @@ print(result.synaptic_weight)  # -> 1.6
 - [x] Core architecture & synaptic scoring specification
 - [x] `memory_guard.py` standalone reference implementation (Zero-dependency core)
 - [ ] Adapters for **LangGraph**, **LlamaIndex**, and **Qdrant**
-- [ ] Evaluation benchmark suite against synthetic memory poisoning attacks
+- [x] Evaluation benchmark suite against synthetic memory poisoning attacks
 
 ---
 
