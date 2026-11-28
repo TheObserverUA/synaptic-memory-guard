@@ -137,16 +137,16 @@ class LiveEntropyVerifier:
         if any(marker in lowered for marker in self.SYNTHETIC_MARKERS):
             return False, 0.0, "Detected templated LLM boilerplate markers"
 
-      tokens = re.findall(r"\b\w+\b", text.lower())
-      entropy = self.compute_shannon_entropy(text)
+        tokens = re.findall(r"\b\w+\b", text.lower())
+        entropy = self.compute_shannon_entropy(text)
 
-      if source_type == "llm_synthetic":
-          entropy *= 0.75  # Penalize ungrounded synthetic self-loops
+        if source_type == "llm_synthetic":
+            entropy *= 0.75  # Penalize ungrounded synthetic self-loops
 
-      if len(tokens) >= 8 and entropy < self.min_entropy:
-          return False, round(entropy, 4), f"Low semantic entropy ({entropy:.2f} < {self.min_entropy})"
+        if len(tokens) >= 8 and entropy < self.min_entropy:
+            return False, round(entropy, 4), f"Low semantic entropy ({entropy:.2f} < {self.min_entropy})"
 
-      return True, round(entropy, 4), "Verified live semantic entropy"
+        return True, round(entropy, 4), "Verified live semantic entropy"
 
         
 
