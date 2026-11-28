@@ -127,5 +127,5 @@ print(result.synaptic_weight)  # -> 1.6
 - [ ] Evaluation benchmark suite against synthetic memory poisoning attacks
 
 ## License
-Dual-licensed under the Apache License, Version 2.0 
+Licensed under the Apache License, Version 2.0 
 Author: **TheObserverUA**.
