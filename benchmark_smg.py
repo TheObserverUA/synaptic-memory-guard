@@ -46,7 +46,7 @@ def run_benchmark(samples_per_category: int = 100):
             for i in range(samples_per_category)
         ],
         "5. Valid Domain Insights": [
-            f"Engineering verified_fact #{i}: tuning PostgreSQL shared_buffers improves pgvector HNSW speed."
+            f"Engineering verified_fact module_{i}_alpha_{i*7}: tuning PostgreSQL shared_buffers and HNSW ef_construction_{i} improves vector recall."
             for i in range(samples_per_category)
         ],
     }
