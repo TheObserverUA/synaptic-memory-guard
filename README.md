@@ -7,7 +7,7 @@
 # Synaptic Memory Guard (SMG)
 **Entropy-Gated & Quarantine-Verified Long-Term Memory Middleware for AI Agents**
 
-**License:** [GNU AGPLv3](https://gnu.org) • **Python:** 3.10+ (Zero-Dependency Core) • **Status:** Reference Architecture / MVP
+**License:** [Apache-2.0] • **Python:** 3.10+ (Zero-Dependency Core) • **Status:** Reference Architecture / MVP
 
 
 ## 1. The Problem in Production Agentic Systems
@@ -127,4 +127,5 @@ print(result.synaptic_weight)  # -> 1.6
 - [ ] Evaluation benchmark suite against synthetic memory poisoning attacks
 
 ## License
-Dual-licensed under **GNU AGPLv3** for open-source/research use and **Commercial License** for proprietary enterprise integration. Author: **TheObserverUA**.
+Dual-licensed under the Apache License, Version 2.0 
+Author: **TheObserverUA**.
