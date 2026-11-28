@@ -3,7 +3,7 @@ Synaptic Memory Guard (SMG) — Reference Implementation
 Entropy-Gated & Quarantine-Verified Long-Term Memory Middleware for AI Agents.
 
 Author: TheObserverUA
-License: GNU AGPLv3 / Commercial Dual License
+License: Apache-2.0
 """
 
 from collections import Counter, deque
