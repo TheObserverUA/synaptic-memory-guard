@@ -126,6 +126,17 @@ print(result.synaptic_weight)  # -> 1.6
 - [ ] Adapters for **LangGraph**, **LlamaIndex**, and **Qdrant**
 - [ ] Evaluation benchmark suite against synthetic memory poisoning attacks
 
+---
+
+## 7. Security Alignment (OWASP Agentic AI)
+
+**Synaptic Memory Guard (SMG)** directly addresses **OWASP ASI06 (Memory & Context Poisoning)** by introducing a defense-in-depth validation layer prior to long-term memory persistence:
+
+- **Pre-Ingestion Rate & Novelty Gating:** Filters out low-novelty noise and reduces the attack surface before storage.
+- **Quarantine & Trust Scoring (EPSP/IPSP):** Mitigates *delayed/sleeper memory poisoning* by holding unverified statements in isolation until corroborated by orthogonal critic probes or external ground-truth sources.
+- **Burst Anomaly Circuit Breaker (`LimbicCooldownGuard`):** Automatically locks memory promotion during high-velocity injection floods.
+
+
 ## License
 Licensed under the Apache License, Version 2.0 
 Author: **TheObserverUA**.
