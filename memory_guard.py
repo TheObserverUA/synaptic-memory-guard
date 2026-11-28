@@ -74,7 +74,7 @@ class ThalamusGate:
 
     @staticmethod
     def _tokenize(text: str) -> List[str]:
-        return re.findall(r"\b[a-zA-Z0-9_-]{2,}\b", text.lower())
+        return re.findall(r"\b\w{2,}\b", text.lower())
 
     @staticmethod
     def _cosine_similarity(vec_a: Counter, vec_b: Counter) -> float:
@@ -137,15 +137,18 @@ class LiveEntropyVerifier:
         if any(marker in lowered for marker in self.SYNTHETIC_MARKERS):
             return False, 0.0, "Detected templated LLM boilerplate markers"
 
-        entropy = self.compute_shannon_entropy(text)
-        if source_type == "llm_synthetic":
-            entropy *= 0.75  # Penalize ungrounded synthetic self-loops
+      tokens = re.findall(r"\b\w+\b", text.lower())
+      entropy = self.compute_shannon_entropy(text)
 
-        if entropy < self.min_entropy:
-            return False, round(entropy, 4), f"Low semantic entropy ({entropy:.2f} < {self.min_entropy})"
+      if source_type == "llm_synthetic":
+          entropy *= 0.75  # Penalize ungrounded synthetic self-loops
 
-        return True, round(entropy, 4), "Verified live semantic entropy"
+      if len(tokens) >= 8 and entropy < self.min_entropy:
+          return False, round(entropy, 4), f"Low semantic entropy ({entropy:.2f} < {self.min_entropy})"
 
+      return True, round(entropy, 4), "Verified live semantic entropy"
+
+        
 
 class LimbicCooldownGuard:
     """
