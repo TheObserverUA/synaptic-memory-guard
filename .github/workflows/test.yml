@@ -23,3 +23,6 @@ jobs:
 
       - name: Run Agent Integration Example
         run: python agent_integration_example.py
+
+      - name: Run Unit Tests
+        run: python -m unittest discover -v
